@@ -5,7 +5,8 @@
  */
 int main(void)
 {
-for (int n = 0; n <= 9; n++)
+	int n;
+for (n = 0; n <= 9; n++)
 {
 	putchar(n + '0');
 }
