@@ -1,6 +1,6 @@
 #include <stdio.h>
-/** 
- * main - Entry point 
+/**
+ * main - Entry point
  * Return: Always 0 (Success)
 */
 int main(void)
@@ -12,7 +12,7 @@ putchar(n + '0');
 }
 for (n = 10; n <= 15; n++)
 {
-putchar('a' + n -10);
+putchar('a' + n - 10);
 }
 putchar('\n');
 return (0);
