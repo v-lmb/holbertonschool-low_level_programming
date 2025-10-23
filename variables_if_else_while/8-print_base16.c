@@ -14,6 +14,6 @@ for (n = 10; n <= 15; n++)
 {
 putchar('a' + n -10);
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
