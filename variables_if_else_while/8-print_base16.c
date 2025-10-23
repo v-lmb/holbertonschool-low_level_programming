@@ -6,10 +6,14 @@
 int main(void)
 {
 int n;
-for (n = 0; n <= 15; n++)
+for (n = 0; n <= 9; n++)
 {
-printf("%x", n);
+putchar(n + '0');
 }
-printf("\n");
+for (n = 10; n <= 15; n++)
+{
+putchar('a' + n -10);
+}
+putchar("\n");
 return (0);
 }
