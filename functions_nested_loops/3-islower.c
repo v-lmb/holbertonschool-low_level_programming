@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * islower - Entry point
+ * _islower - Entry point
+ * @c: case
  * Return: Always 0 (Success)
  */
 int _islower(int c)
