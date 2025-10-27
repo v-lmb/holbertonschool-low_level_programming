@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * abs - Entry point
+ * _abs - Entry point
+ * @c: case
  * Return: Always 0 (Success)
  */
 int _abs(int c)
