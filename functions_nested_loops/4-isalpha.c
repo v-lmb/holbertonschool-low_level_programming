@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * isalpha - Entry point
+ * _isalpha - Entry point
+ * @c: case
  * Return: Always 0 (Success)
  */
 int _isalpha(int c)
