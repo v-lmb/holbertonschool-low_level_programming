@@ -17,9 +17,13 @@ void print_triangle(int size)
 	for (ligne = 1; ligne <= size; ligne++)
 	{
 		for (espace = size - ligne; espace > 0; espace--)
-		_putchar(' ');
-
+		{
+			_putchar(' ');
+		}
 		for (hash = 0; hash > ligne; hash++)
+		{
+			_putchar('#');
+		}
 		_putchar('#');
 	_putchar('\n');
 	}
