@@ -1,8 +1,6 @@
 #include "main.h"
 /**
  * jack_bauer - Entry point
- * @h: hours
- * @m: minutes
  * Return: prints every minute of the day
  */
 void jack_bauer(void)
