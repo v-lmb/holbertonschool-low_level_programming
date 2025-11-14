@@ -21,16 +21,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
 
-	if ((size_t)n >= len2)
+	if (n >= len2)
 		copy_n = len2;
 	else
-		copy_n = (size_t)n;
-	total = len1 + copy_n + 1;
+		copy_n = n;
 
-	concat = malloc(total * sizeof(char));
+	concat = malloc(sizeof(char) * (len1 + copy_n + 1));
 	if (concat == NULL)
 		return (NULL);
 
