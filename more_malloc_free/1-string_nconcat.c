@@ -11,10 +11,11 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	size_t len1, len2;
-	size_t copy_n;
-	size_t total;
-	size_t i, j;
+	unsigned int len1 = 0;
+	unsigned int len2 = 0;
+	unsigned int i;
+	unsigned int j;
+	unsigned int copy_n;
 
 	if (s1 == NULL)
 		s1 = "";
