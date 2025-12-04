@@ -11,6 +11,8 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
+	unsigned int size = 0;
+	unsigned int i = 0;
 
 	if (str == NULL)
 	{
@@ -25,13 +27,13 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new->str = strdup(str);
-	if (new->str == NULL)
+	while (str[i])
 	{
-		free(new);
-		return (NULL);
+		i++;
+		size++;
 	}
 
-	new->len = strlen(str);
+	new->len = size;
 	new->next = *head;
 	*head = new;
 	return (new);
