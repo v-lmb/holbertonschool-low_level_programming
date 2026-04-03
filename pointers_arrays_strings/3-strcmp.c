@@ -1,19 +1,37 @@
-#include "main.h"
+#include"main.h"
+#include "strlen.c"
+#include <stdio.h>
 /**
- * _strcmp - Entry point
- * @s1: string1 *
- * @s2: string2 First machin
- * Return: Always 0 (Success)
+ * _strspn - Returns the length of the largest substring containing only
+ * characters specified in the list of accepted characters
+ * @s: the array to look into
+ * @accept: the character to accept
+ *
+ * Return: the length of the string
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
+	int i, length, sec_i, length_acce, check = 0;
+	unsigned int count = 0;
 
-	while (s1[i] != '\0' && s2[i] != '\0')
+	length = _strlen(s);
+	length_acce = _strlen(accept);
+	for (i = 0 ; i < length ; i++)
 	{
-		if (s1[1] != s2[i])
-		return (s1[i] - s2[i]);
-		i++;
+		for (sec_i = 0 ; sec_i < length_acce ; sec_i++)
+		{
+			if (s[i] == accept[sec_i])
+			{
+				count++;
+				check = 1;
+				break;
+			}
+		}
+		if (check == 0)
+		{
+			return (count);
+		}
+		check = 0;
 	}
-	return (s1[i] - s2[i]);
+	return (count);
 }
