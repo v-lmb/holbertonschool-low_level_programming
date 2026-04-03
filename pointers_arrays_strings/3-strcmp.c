@@ -1,5 +1,4 @@
 #include"main.h"
-#include "strlen.c"
 #include <stdio.h>
 /**
  * _strspn - Returns the length of the largest substring containing only
